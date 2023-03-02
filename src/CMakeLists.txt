@@ -2,7 +2,7 @@
 # CONTROLLER_TYPE: "Gamecube" or "N64" (default N64)
 # If Gamecube controller type
 # GC_CONTROLLER_TYPE: "oneToOne" or "sms" (default oneToOne)
-add_compile_definitions(CONTROLLER_TYPE="Gamecube")
+add_compile_definitions(CONTROLLER_TYPE="N64")
 add_subdirectory(otherController)
 add_subdirectory(switchController)
 
