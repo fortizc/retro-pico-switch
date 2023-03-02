@@ -85,10 +85,13 @@ SwitchReport *N64Controller::getSwitchReport() {
     _switchReport.lx = SWITCH_JOYSTICK_MID + scaledX;
 
     int8_t yPos = -_controllerState[3];
+    if (yPos == -128)
+        yPos = 127;
+
     _maxY = yPos > _maxY ? yPos : _maxY;
     _minY = yPos < _minY ? yPos : _minY;
     uint8_t scaledY = yPos > 0 ? yPos * (SWITCH_JOYSTICK_MID - 1) / _maxY : yPos * -SWITCH_JOYSTICK_MID / _minY;
     _switchReport.ly = SWITCH_JOYSTICK_MID + scaledY;
-    
+
     return &_switchReport;
 }
