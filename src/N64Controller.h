@@ -6,6 +6,7 @@
 class N64Controller: public Controller {
   public:
     N64Controller(uint8_t pin): Controller(pin, 4) {};
+    virtual ~N64Controller() = default;
     void init();
     void updateState();
     SwitchReport *getSwitchReport();

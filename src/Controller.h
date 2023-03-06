@@ -12,6 +12,8 @@ class Controller {
       _stateBytes = stateBytes;
       _controllerState = new uint8_t[_stateBytes];
     }
+
+    virtual ~Controller() = default;
     void emptyRxFifo() {
       while(pio_sm_get_rx_fifo_level(_pio, _sm)) {
         pio_sm_get(_pio, _sm);

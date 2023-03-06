@@ -12,9 +12,11 @@
 class GamecubeController: public Controller {
   public:
     GamecubeController(uint8_t pin): Controller(pin, 10) {};
-    void init();
-    void updateState();
-    SwitchReport *getSwitchReport();
+    virtual ~GamecubeController() = default;
+    void init() override;
+    void updateState() override;
+    SwitchReport *getSwitchReport() override;
+
   private:
     uint8_t getScaledAnalogAxis(uint8_t axisPos, uint8_t *minAxis, uint8_t *maxAxis);
     uint8_t _maxAnalogX = 0xC0;
