@@ -1,7 +1,7 @@
 #ifndef N64Controller_h
 #define N64Controller_h
 
-#include "Controller.h"
+#include "controller.hpp"
 
 class N64Controller : public Controller {
 public:

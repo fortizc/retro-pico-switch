@@ -6,6 +6,7 @@ project(retro_pico_switch C CXX ASM)
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_CXX_STANDARD 20)
+add_compile_options(-Wall)
 
 # RPI initialization
 set(PICO_CXX_ENABLE_EXCEPTIONS 1)
@@ -15,11 +16,11 @@ if (NOT CONTROLLER_TYPE OR (NOT ${CONTROLLER_TYPE} STREQUAL "N64" AND NOT ${CONT
     MESSAGE(FATAL_ERROR "Missing controller type, CONTROLLER_TYPE must be defined (N64 or GC)")
 endif()
 
-add_compile_definitions(CFG_TUSB_CONFIG_FILE="${CMAKE_CURRENT_LIST_DIR}/src/tusb_config.h")
+add_compile_definitions(CFG_TUSB_CONFIG_FILE="${CMAKE_CURRENT_LIST_DIR}/src/tusb_config.hpp")
 
 add_library(controller INTERFACE)
 target_link_libraries(controller INTERFACE pico_stdlib tinyusb_device hardware_pio)
-pico_generate_pio_header(controller ../src/Controller.pio)
+pico_generate_pio_header(controller ../src/controller.pio)
 
 file(GLOB MAIN_SRC src/*.cpp)
 add_executable(${PROJECT_NAME} ${MAIN_SRC})

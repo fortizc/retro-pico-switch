@@ -1,6 +1,6 @@
 #include "pico/stdlib.h"
-#include "N64Controller.h"
-#include "Controller.pio.h"
+#include "n64.hpp"
+#include "controller.pio.h"
 
 void N64Controller::init()
 {

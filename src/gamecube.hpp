@@ -1,7 +1,7 @@
 #ifndef GamecubeController_h
 #define GamecubeController_h
 #include <string.h>
-#include "Controller.h"
+#include "controller.hpp"
 
 #ifdef GC_CONTROLLER_TYPE
 #define gcControllerType GC_CONTROLLER_TYPE

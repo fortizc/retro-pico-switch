@@ -3,7 +3,7 @@
 
 #include "pico/stdlib.h"
 #include "hardware/pio.h"
-#include "SwitchDescriptors.h"
+#include "switch_descriptors.hpp"
 
 class Controller {
 public:

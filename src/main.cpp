@@ -1,8 +1,8 @@
 #include <string.h>
 #include "pico/stdlib.h"
-#include "N64Controller.h"
-#include "GamecubeController.h"
-#include "SwitchDescriptors.h"
+#include "n64.hpp"
+#include "gamecube.hpp"
+#include "switch_descriptors.hpp"
 #include "tusb.h"
 
 #ifdef CONTROLLER_TYPE

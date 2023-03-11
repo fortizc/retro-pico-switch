@@ -24,7 +24,7 @@
  */
 
 #include "tusb.h"
-#include "SwitchDescriptors.h"
+#include "switch_descriptors.hpp"
 #include <string.h>
 
 // Invoked when received GET DEVICE DESCRIPTOR

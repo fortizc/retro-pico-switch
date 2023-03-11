@@ -1,7 +1,7 @@
 
 #include "pico/stdlib.h"
-#include "GamecubeController.h"
-#include "Controller.pio.h"
+#include "gamecube.hpp"
+#include "controller.pio.h"
 
 void GamecubeController::init()
 {
