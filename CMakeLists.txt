@@ -24,3 +24,5 @@ pico_generate_pio_header(controller ../src/Controller.pio)
 file(GLOB MAIN_SRC src/*.cpp)
 add_executable(${PROJECT_NAME} ${MAIN_SRC})
 target_link_libraries(${PROJECT_NAME} pico_stdlib tinyusb_device hardware_pio controller)
+
+pico_add_extra_outputs(${PROJECT_NAME})
