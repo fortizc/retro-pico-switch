@@ -16,9 +16,9 @@ int main()
     stdio_init_all();
     Controller *controller;
     if (strcmp(controllerType, "N64") == 0) {
-        controller = new N64Controller(18);
+        controller = new N64Controller(3);
     } else if (strcmp(controllerType, "GC") == 0) {
-        controller = new GamecubeController(18);
+        controller = new GamecubeController(3);
     }
 
     SwitchDescriptors switchController;
